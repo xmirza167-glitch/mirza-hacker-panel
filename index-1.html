@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#07110b">
+<meta name="description" content="MIRZA HACKER PANEL — a collection of useful, safe browser tools.">
+<title>MIRZA HACKER PANEL</title>
+<style>
+:root{--bg:#050b07;--panel:#0b160f;--panel2:#0e1d13;--green:#39ff78;--green2:#16c653;--muted:#91a99a;--line:#1c3826;--white:#eaffef;--red:#ff6262}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(ellipse at 50% -15%,#12351e 0%,transparent 42%),var(--bg);color:var(--white);font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;min-height:100vh}
+a{color:inherit;text-decoration:none}button,input,textarea,select{font:inherit}.wrap{width:min(1120px,92%);margin:auto}
+header{position:sticky;top:0;z-index:10;background:#050b07eF;backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.nav{height:70px;display:flex;align-items:center;justify-content:space-between;gap:16px}.brand{display:flex;align-items:center;gap:11px;font-weight:900;letter-spacing:1.3px}.logo{width:38px;height:38px;border:1px solid var(--green);border-radius:11px;display:grid;place-items:center;color:var(--green);box-shadow:0 0 18px #39ff7830;font-size:20px}.brand span:last-child{color:var(--green)}.navlinks{display:flex;gap:22px;color:var(--muted);font-size:13px}.navlinks a:hover{color:var(--green)}
+.hero{padding:72px 0 45px;text-align:center}.eyebrow{display:inline-flex;gap:8px;align-items:center;border:1px solid #245b35;background:#0b1c10;border-radius:99px;padding:7px 13px;color:var(--green);font-size:11px;font-weight:800;letter-spacing:1.5px}.dot{width:7px;height:7px;background:var(--green);border-radius:50%;box-shadow:0 0 10px var(--green)}h1{font-size:clamp(36px,7vw,68px);line-height:1.04;margin:22px 0 13px;letter-spacing:-2px}h1 em{font-style:normal;color:var(--green);text-shadow:0 0 28px #39ff7830}.hero p{max-width:620px;margin:0 auto;color:var(--muted);line-height:1.7;font-size:15px}.hero-actions{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-top:25px}
+.btn{border:1px solid var(--green);background:var(--green);color:#041008;font-weight:850;padding:11px 17px;border-radius:9px;cursor:pointer;transition:.2s}.btn:hover{transform:translateY(-2px);box-shadow:0 8px 25px #39ff7830}.btn.secondary{background:transparent;color:var(--green);border-color:var(--line)}.btn.small{padding:8px 12px;font-size:12px}.statusbar{display:flex;justify-content:center;gap:20px;flex-wrap:wrap;color:var(--muted);font-size:11px;margin-top:29px}.statusbar b{color:var(--green)}
+.section-head{display:flex;justify-content:space-between;align-items:end;gap:15px;margin:28px 0 17px}.section-head h2{margin:0;font-size:23px}.section-head p{margin:5px 0 0;color:var(--muted);font-size:13px}.search{width:min(250px,100%);background:var(--panel);border:1px solid var(--line);border-radius:9px;padding:10px 12px;color:var(--white);outline:none}.search:focus,.field:focus{border-color:var(--green)}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:15px;margin-bottom:50px}.card{background:linear-gradient(145deg,#0e1c13,#09120c);border:1px solid var(--line);border-radius:15px;padding:19px;min-height:165px;transition:.2s}.card:hover{border-color:#347b49;transform:translateY(-3px)}.card-icon{width:39px;height:39px;display:grid;place-items:center;background:#102719;border:1px solid #214b2e;border-radius:11px;color:var(--green);font-size:19px}.card h3{margin:14px 0 6px;font-size:16px}.card p{margin:0;color:var(--muted);font-size:12px;line-height:1.55}.tag{display:inline-block;margin-top:12px;color:var(--green);font-size:10px;letter-spacing:1px;font-weight:800}
+.tool-area{padding:10px 0 70px}.tool-panel{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:22px;margin-bottom:16px;scroll-margin-top:90px}.tool-title{display:flex;align-items:center;gap:10px;margin-bottom:8px}.tool-title h3{margin:0;font-size:18px}.tool-title .card-icon{width:34px;height:34px;font-size:16px}.hint{color:var(--muted);font-size:12px;line-height:1.6;margin:0 0 15px}.field{width:100%;background:#050d08;border:1px solid var(--line);border-radius:9px;color:var(--white);padding:11px 12px;outline:none;margin:6px 0 10px}.field::placeholder{color:#668070}textarea.field{min-height:95px;resize:vertical}.row{display:flex;gap:9px;align-items:center;flex-wrap:wrap}.row .field{flex:1;min-width:180px}.result{margin-top:12px;padding:12px;border-radius:9px;background:#061009;border:1px dashed #285638;color:#caffd7;font-size:13px;overflow-wrap:anywhere;min-height:42px;white-space:pre-wrap}.result:empty{display:none}.range{accent-color:var(--green);vertical-align:middle}.check{display:flex;align-items:center;gap:7px;color:var(--muted);font-size:12px;margin:5px 12px 5px 0}.check input{accent-color:var(--green)}.qrbox{margin-top:14px;display:flex;align-items:center;gap:15px;flex-wrap:wrap}.qrbox img{width:150px;height:150px;background:white;padding:7px;border-radius:9px}.note{border-left:3px solid var(--green);padding:10px 13px;background:#0b1b10;color:var(--muted);font-size:12px;line-height:1.6;border-radius:0 8px 8px 0;margin-top:13px}
+footer{border-top:1px solid var(--line);padding:24px 0;color:var(--muted);font-size:12px;text-align:center}footer b{color:var(--green)}
+@media(max-width:800px){.grid{grid-template-columns:repeat(2,1fr)}.navlinks{gap:12px}}@media(max-width:540px){.nav{height:62px}.navlinks a:not(:last-child){display:none}.hero{padding:55px 0 35px}.grid{grid-template-columns:1fr}.section-head{align-items:stretch;flex-direction:column}.search{width:100%}.tool-panel{padding:16px}}
+</style>
+</head>
+<body>
+<header><div class="wrap nav">
+  <a class="brand" href="#"><span class="logo">⌘</span><span>MIRZA <span>PANEL</span></span></a>
+  <nav class="navlinks"><a href="#tools">TOOLS</a><a href="#about">ABOUT</a><a href="#footer">CONTACT</a></nav>
+</div></header>
+<main class="wrap">
+<section class="hero">
+  <div class="eyebrow"><span class="dot"></span> SYSTEM ONLINE · BROWSER TOOLKIT</div>
+  <h1>MIRZA <em>HACKER</em><br>PANEL</h1>
+  <p>A clean collection of useful digital tools in one place. Fast, responsive, and designed for your browser — no account required.</p>
+  <div class="hero-actions"><a class="btn" href="#tools">EXPLORE TOOLS →</a><a class="btn secondary" href="#about">ABOUT PANEL</a></div>
+  <div class="statusbar"><span>● <b>6</b> BROWSER TOOLS</span><span>● <b>100%</b> RESPONSIVE</span><span>● <b>NO LOGIN</b> REQUIRED</span></div>
+</section>
+<section id="tools">
+  <div class="section-head"><div><h2>Toolbox<span style="color:var(--green)">.</span></h2><p>Select a tool and use it instantly.</p></div><input id="filter" class="search" placeholder="Search tools..." aria-label="Search tools"></div>
+  <div class="grid" id="toolCards">
+    <a class="card" data-name="password generator" href="#password"><div class="card-icon">⌑</div><h3>Password Generator</h3><p>Create a strong random password with options for length and character types.</p><span class="tag">SECURITY · LOCAL</span></a>
+    <a class="card" data-name="text encoder decoder base64" href="#encoder"><div class="card-icon">⌘</div><h3>Text Encoder / Decoder</h3><p>Encode or decode text using Base64 directly in your browser.</p><span class="tag">TEXT · LOCAL</span></a>
+    <a class="card" data-name="qr code generator" href="#qrcode"><div class="card-icon">▦</div><h3>QR Code Generator</h3><p>Turn a link or short text into a scannable QR code.</p><span class="tag">QR · ONLINE API</span></a>
+    <a class="card" data-name="ip information lookup" href="#ip"><div class="card-icon">◎</div><h3>IP Information</h3><p>View public IP and approximate network location details.</p><span class="tag">NETWORK · ONLINE API</span></a>
+    <a class="card" data-name="text case converter" href="#case"><div class="card-icon">Aa</div><h3>Text Case Converter</h3><p>Convert text to uppercase, lowercase, title case, or sentence case.</p><span class="tag">TEXT · LOCAL</span></a>
+    <a class="card" data-name="url parser analyzer" href="#url"><div class="card-icon">↗</div><h3>URL Analyzer</h3><p>Break a URL into protocol, host, path, and query parameters.</p><span class="tag">WEB · LOCAL</span></a>
+  </div>
+</section>
+<section class="tool-area">
+  <div class="section-head"><div><h2>Quick tools<span style="color:var(--green)">.</span></h2><p>Tools run when you press their action button.</p></div></div>
+  <div class="tool-panel" id="password">
+    <div class="tool-title"><div class="card-icon">⌑</div><h3>Password Generator</h3></div>
+    <p class="hint">Generate a random password on this device. It is not sent to a server.</p>
+    <label class="hint">Length: <b id="lenLabel" style="color:var(--green)">18</b></label><input class="range" id="length" type="range" min="8" max="64" value="18">
+    <div class="row"><label class="check"><input type="checkbox" id="upper" checked> Uppercase</label><label class="check"><input type="checkbox" id="lower" checked> Lowercase</label><label class="check"><input type="checkbox" id="numbers" checked> Numbers</label><label class="check"><input type="checkbox" id="symbols" checked> Symbols</label></div>
+    <div class="row"><button class="btn small" id="makePass">GENERATE</button><button class="btn small secondary" id="copyPass">COPY</button></div><div class="result" id="passResult"></div>
+  </div>
+  <div class="tool-panel" id="encoder">
+    <div class="tool-title"><div class="card-icon">⌘</div><h3>Text Encoder / Decoder</h3></div>
+    <p class="hint">Base64 is an encoding format, not encryption. Do not use it to protect secrets.</p>
+    <textarea class="field" id="baseInput" placeholder="Enter text here..."></textarea>
+    <div class="row"><button class="btn small" id="encode">ENCODE</button><button class="btn small secondary" id="decode">DECODE</button><button class="btn small secondary" id="copyBase">COPY RESULT</button></div><div class="result" id="baseResult"></div>
+  </div>
+  <div class="tool-panel" id="qrcode">
+    <div class="tool-title"><div class="card-icon">▦</div><h3>QR Code Generator</h3></div>
+    <p class="hint">Enter text or a URL. QR generation uses a third-party online image service; the entered content is sent to that service.</p>
+    <div class="row"><input class="field" id="qrInput" placeholder="https://example.com"><button class="btn small" id="makeQr">GENERATE QR</button></div>
+    <div class="qrbox" id="qrBox"></div>
+  </div>
+  <div class="tool-panel" id="ip">
+    <div class="tool-title"><div class="card-icon">◎</div><h3>Public IP Information</h3></div>
+    <p class="hint">Shows approximate public network information from an external lookup service. It does not reveal an exact home address.</p>
+    <button class="btn small" id="lookupIp">LOOK UP MY IP</button><div class="result" id="ipResult"></div>
+  </div>
+  <div class="tool-panel" id="case">
+    <div class="tool-title"><div class="card-icon">Aa</div><h3>Text Case Converter</h3></div>
+    <textarea class="field" id="caseInput" placeholder="Type or paste your text..."></textarea>
+    <div class="row"><button class="btn small" data-case="upper">UPPERCASE</button><button class="btn small secondary" data-case="lower">lowercase</button><button class="btn small secondary" data-case="title">Title Case</button><button class="btn small secondary" data-case="sentence">Sentence case</button></div><div class="result" id="caseResult"></div>
+  </div>
+  <div class="tool-panel" id="url">
+    <div class="tool-title"><div class="card-icon">↗</div><h3>URL Analyzer</h3></div>
+    <p class="hint">Parses the structure of a URL locally. It does not visit or scan the website.</p>
+    <div class="row"><input class="field" id="urlInput" placeholder="https://example.com/path?name=value"><button class="btn small" id="analyzeUrl">ANALYZE</button></div><div class="result" id="urlResult"></div>
+  </div>
+</section>
+<section id="about" class="tool-panel">
+  <div class="tool-title"><div class="card-icon">⌘</div><h3>About MIRZA PANEL</h3></div>
+  <p class="hint">MIRZA HACKER PANEL is a front-end collection of everyday browser utilities. Local tools process data in your browser. QR and public-IP lookup features require an internet connection and use external services. This panel does not hack accounts, access private systems, or perform unauthorized scans.</p>
+  <div class="note">GitHub Pages ready: upload this file as <b style="color:var(--green)">index.html</b> to the root of your repository, then enable GitHub Pages in repository Settings → Pages.</div>
+</section>
+</main>
+<footer id="footer"><div class="wrap">BUILT FOR <b>MIRZA</b> · MIRZA HACKER PANEL · <span id="year"></span></div></footer>
+<script>
+const $=id=>document.getElementById(id);
+const show=(id,msg)=>$(id).textContent=msg;
+async function copyText(text,id){if(!text){show(id,'Nothing to copy yet.');return}try{await navigator.clipboard.writeText(text);show(id,'Copied to clipboard.')}catch(e){show(id,'Clipboard unavailable. Please select and copy the text manually.')}}
+$('filter').addEventListener('input',e=>{const q=e.target.value.toLowerCase();document.querySelectorAll('#toolCards .card').forEach(c=>c.style.display=c.dataset.name.includes(q)?'':'none')});
+$('length').addEventListener('input',e=>$('lenLabel').textContent=e.target.value);
+$('makePass').onclick=()=>{let chars='';if($('upper').checked)chars+='ABCDEFGHIJKLMNOPQRSTUVWXYZ';if($('lower').checked)chars+='abcdefghijklmnopqrstuvwxyz';if($('numbers').checked)chars+='0123456789';if($('symbols').checked)chars+='!@#$%^&*()-_=+[]{}?';if(!chars){show('passResult','Select at least one character type.');return}const n=+$('length').value;let out='';const bytes=new Uint32Array(n);crypto.getRandomValues(bytes);for(let i=0;i<n;i++)out+=chars[bytes[i]%chars.length];show('passResult',out)};
+$('copyPass').onclick=()=>copyText($('passResult').textContent,'passResult');
+$('encode').onclick=()=>{try{show('baseResult',btoa(unescape(encodeURIComponent($('baseInput').value))))}catch(e){show('baseResult','Could not encode this text.')}};
+$('decode').onclick=()=>{try{show('baseResult',decodeURIComponent(escape(atob($('baseInput').value.trim()))))}catch(e){show('baseResult','Invalid Base64 input.')}};
+$('copyBase').onclick=()=>copyText($('baseResult').textContent,'baseResult');
+$('makeQr').onclick=()=>{const val=$('qrInput').value.trim();if(!val){$('qrBox').textContent='Enter text or a URL first.';return}const img=document.createElement('img');img.alt='Generated QR code';img.src='https://api.qrserver.com/v1/create-qr-code/?size=220x220&data='+encodeURIComponent(val);const wrap=document.createElement('div');const link=document.createElement('a');link.href=img.src;link.target='_blank';link.rel='noopener';link.textContent='Open QR image';link.style.color='var(--green)';link.style.fontSize='12px';wrap.append(link);$('qrBox').replaceChildren(img,wrap)};
+$('lookupIp').onclick=async()=>{show('ipResult','Looking up public network information...');try{const r=await fetch('https://ipapi.co/json/');if(!r.ok)throw Error('Lookup failed');const d=await r.json();show('ipResult',`IP: ${d.ip||'Unavailable'}\nCity: ${d.city||'Unavailable'}\nRegion: ${d.region||'Unavailable'}\nCountry: ${d.country_name||'Unavailable'}\nISP / Organization: ${d.org||'Unavailable'}\nTimezone: ${d.timezone||'Unavailable'}`)}catch(e){show('ipResult','Could not retrieve information. Check your connection or try again later.')}};
+document.querySelectorAll('[data-case]').forEach(b=>b.onclick=()=>{const t=$('caseInput').value;let v=t;if(b.dataset.case==='upper')v=t.toUpperCase();if(b.dataset.case==='lower')v=t.toLowerCase();if(b.dataset.case==='title')v=t.toLowerCase().replace(/\b\w/g,c=>c.toUpperCase());if(b.dataset.case==='sentence')v=t.toLowerCase().replace(/(^\s*\w|[.!?]\s+\w)/g,c=>c.toUpperCase());show('caseResult',v)});
+$('analyzeUrl').onclick=()=>{try{const u=new URL($('urlInput').value.trim());const params=[...u.searchParams.entries()].map(([k,v])=>`  ${k}: ${v}`).join('\n')||'  None';show('urlResult',`Protocol: ${u.protocol}\nHost: ${u.host}\nHostname: ${u.hostname}\nPort: ${u.port||'Default'}\nPath: ${u.pathname}\nQuery parameters:\n${params}\nFragment: ${u.hash||'None'}`)}catch(e){show('urlResult','Invalid URL. Include https:// or http://')}};
+$('year').textContent=new Date().getFullYear();
+$('makePass').click();
+</script>
+</body>
+</html>
